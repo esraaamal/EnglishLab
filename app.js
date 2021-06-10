@@ -9,7 +9,7 @@ function playSound(e){
     if(!audio)return ;//stop the function running;
     audio.currentTime=0;//rewind the sound from start
     key2.classList.add('playing');
-    audio.playbackRate=10
+    // audio.playbackRate=10
     audio.play();
     audio.playbackRate=10
 
