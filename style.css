@@ -5,6 +5,7 @@ body{
     background: url(./images/cover-wood.jpeg);
     color: blanchedalmond;
     position: relative;
+  
     
 }
 .h1{
@@ -12,19 +13,12 @@ body{
     font-size: 50px;
     font-family: 'Handlee';
     font-style: italic;
-    position: absolute;
+    position:absolute;
     top: -15%;
     letter-spacing: 11px;
 }
-.card{
-    transition: all 0.5s;
-    transform-style: preserve-3d;
-}
-.back .front{
-    backface-visibility: hidden;
-    position: absolute;
-    top: 0;
-    left: 0;
+.back{
+   display: none;
 }
 
 .keys{
@@ -65,6 +59,8 @@ kbd{
     transform: scale(1.1);
     border-color: #ffc600;
     box-shadow: 0 0 1rem #ffc600;
+    /* border:.4rem solid black; */
+
 }
 
 .sound{
