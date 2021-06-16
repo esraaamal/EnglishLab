@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background:black;
+            margin: 0;
+            
+        }
+        .container{
+            background:url(./images/pexels-aleksandar-pasaric-2341830.jpg);
+            background-size: cover;
+            position: relative;
+            top: 0;
+            left: 0;
+            height: 100vh;
+            color: ivory;
+            z-index: 1;
+            display: grid;
+            place-items: center;
+
+        }
+        .center{
+           margin-top: -7%;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+            flex-wrap:wrap; 
+        }
+        .outer{
+            position: relative;
+            margin: 0 50px;
+            background: #111;
+            border: 1px solid cyan;
+        }
+        .circle{
+            height:200px;
+            width:200px;
+            border-radius: 50%;
+        }
+        .outer button, .outer span{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+        .outer button{
+         background: #111;
+         color: #f2f2f2;
+         outline: none;
+         border: none;
+         z-index: 1;
+         font-size: 20px;
+         letter-spacing: 1px;
+         text-transform: uppercase;
+         cursor: pointer;
+        }
+        .circle button{
+            height:180px;
+            width:180px;
+            border-radius: 50%;
+
+        }
+        .outer span{
+            height: 100%;
+            width: 100%;
+            background: inherit;
+        }
+        .circle span{
+            border-radius: 50%;
+        }
+        .outer:hover span:nth-child(0){
+            filter: blur(7px);
+        }
+        .outer:hover span:nth-child(1){
+            filter: blur(14px);
+        }
+.outer:hover{ 
+    background:linear-gradient(#14ffe9,#ffeb3b,#ff00e0);
+    animation: rotate 1.5s linear infinite;
+    border:none
+}
+@keyframes rotate {
+    0%{
+        filter: hue-rotate(0deg);
+    }
+    100%{
+        filter: hue-rotate(360deg);
+    }
+
+}
+button a{
+    text-decoration: none;
+    color:white;
+}
+
+        </style>
+</head>
+<body>
+    <div class="container">
+ <div class="flex-cont">
+
+<div class="center">
+    
+    <div class="outer circle">
+        <button> <a href="index.html">Week1</a></button>
+        <spna></spna>
+        <spna></spna>
+    </div>
+    <div class="outer circle">
+        <button>Week2</button>
+        <spna></spna>
+        <spna></spna>
+    </div>  
+     <div class="outer circle">
+        <button>Week3</button>
+        <spna></spna>
+        <spna></spna>
+    </div>   
+    <div class="outer circle">
+        <button>Week4</button>
+        <spna></spna>
+        <spna></spna>
+    </div>  
+     <div class="outer circle">
+        <button>Week5</button>
+        <spna></spna>
+        <spna></spna>
+    </div>
+</div>
+
+
+
+</div>
+</div>
+</body>
+</html>

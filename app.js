@@ -24,14 +24,39 @@ keys.forEach(key=>key.addEventListener('transitionend',removeTransition))
 
 keys.forEach(key=>key.addEventListener('click',playSound))
 
-const card=document.querySelector('.card')
-// const back=document.querySelector('.back')
-const front=document.querySelectorAll('.front')
-console.log(front)
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// const card=document.querySelector('.card')
+// // const back=document.querySelector('.back')
+// const front=document.querySelectorAll('.front')
+// console.log(front)
 // function frontFunct(e){
 //     const key1=document.querySelector(`div[data-key="${e.target.childNodes[0].nodeValue}"]`);
 //     const key2=document.querySelector(`div[data-key="${e.target.nextElementSibling.childNodes[0].nodeValue}"]`);
