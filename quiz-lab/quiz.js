@@ -48,13 +48,19 @@ const aText=document.getElementById("a-text")
 const bText=document.getElementById("b-text")
 const cText=document.getElementById("c-text")
 const dText=document.getElementById("d-text")
+const answerEls=document.querySelectorAll('.answer')
+const quiz=document.getElementById("quiz")
 
 let curretnQuiz=0;
+let score=0;
+
 loadQuiz();
-let result=0;
+
+
 function loadQuiz(){
+    deSelect();
     const currentQuizData=quizData[curretnQuiz]
-    question.innerTextL=currentQuizData.question
+    question.innerText=currentQuizData.question
     aText.innerText=currentQuizData.a
     bText.innerText=currentQuizData.b
     cText.innerText=currentQuizData.c
@@ -84,47 +90,52 @@ function loadQuiz(){
 // input.forEach(key=>key.addEventListener('click',findAnswer))
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 function getSelected(){
-    const answerEls=document.querySelectorAll('input')
 
-answerEls.forEach(answer=>console.log(answer.checked))
-    
+let firstAnswer=undefined;
+
+    answerEls.forEach(answer=>{
+        console.log(answer.checked)
+   if(answer.checked){
+     firstAnswer= answer.id
+   }
+})
+    return firstAnswer
 
 }
-// getSelected()
+
+function deSelect(){
+    answerEls.forEach(answer=>{
+   answer.checked=false
+})
+
+}
+
+
+
 
 submitBtn.addEventListener('click',()=>{
-// loadQuiz()
-// curretnQuiz++;
-// if(curretnQuiz<quizData.length){
-//     loadQuiz()
-// }
-// else{
-//     alert(`you finsh the quiz Great job!,you'r result is ${result}`)
-// }
-getSelected()
+let correctAnswer=getSelected()
+console.log(correctAnswer)
+ if(correctAnswer){
+     if(correctAnswer===quizData[curretnQuiz].correct){
+         score++
+     }
+    curretnQuiz++;
+
+    if(curretnQuiz<quizData.length){
+    loadQuiz()
+}
+else{
+   quiz.innerHTML=`<h2>you answered correctly at ${score}/${quizData.length} questions.
+   </h2>`;
+   submitBtn.innerText='Reload'
+   submitBtn.setAttribute('onclick','location.reload()')
+   
+}
+
+ }
+
 
 
 })

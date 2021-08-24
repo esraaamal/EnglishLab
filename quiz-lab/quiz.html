@@ -48,6 +48,10 @@ cursor: pointer;
         button:hover{
             background-color:#662085 ;
         }
+        button:focus{
+            background-color: #3b0b50;
+            outline: none;
+        }
         ul li{
 
             margin: 1rem 0;
@@ -57,26 +61,26 @@ cursor: pointer;
 </head>
 <body>
     <div class="quiz-container">
-        <div class="quiz-header">
+        <div class="quiz-header" id="quiz">
         <h2 id="question">Question Text</h2>
         <ul>
            <li>
-               <input type="radio" id="a" name="answer">
+               <input class="answer" type="radio" id="a" name="answer">
                <label id="a-text" for="a">Question</label >
            </li>
            <li>
-               <input type="radio" id="b" name="answer">
+               <input class="answer" type="radio" id="b" name="answer">
                <label id="b-text" for="b">Question</label>
            </li>
            <li>
-               <input type="radio" id="c" name="answer">
+               <input class="answer" type="radio" id="c" name="answer">
                <label id="c-text" for="c">Question</label >
            </li>
            <li>
-               <input type="radio" id="d" name="answer">
+               <input class="answer" type="radio" id="d" name="answer">
                <label id="d-text" for="d">Question</label >
            </li>
-         
+    
 
         </ul>
     </div>
